@@ -4,6 +4,7 @@
 import { useState } from "react"
 import { drinkList } from "./drinklist";
 import './ingStyles.css'
+import Link from 'next/link';
 //import crypto from 'crypto';
 
 interface Ingredient {
@@ -59,6 +60,10 @@ export default function ingredients() {
             }
         )}
 
+        function clearLine() {
+            setInputText("");
+        }
+
         function initDrinks(ingList: Ingredient[]) {
             setDrinks(drinkList(ingList));
         }
@@ -84,12 +89,19 @@ export default function ingredients() {
 
     return (
         <div className="flex flex-col items-center gap-8 pt-8 bg-slate-800 pb-32">
-            <div className="text-2xl text-white">List of Ingredients</div>
-            <form onSubmit={handleSubmit} className="flex gap-2">
-                <input className="text-2xl rounded shadow-md" type="text" placeholder="Enter Ingredients" value={inputText} onChange={e => setInputText(e.target.value)}/>
+            <div className="flex flex-row items-center justify-between w-full px-4">
+                <Link className="text-white bg-red-700 rounded-md shadow-md px-2 hover:bg-red-900 hover:transform hover:-translate-y-1 transition duration-300" href="/">Back</Link>
+                <div className="text-2xl text-white">Start Listing Ingredients!</div>
+                <div className="ml-10"></div> {/* This empty div is used for spacing, you can adjust its width as needed */}
+            </div>
+            <div className="flex gap-2">
+            <form onSubmit={handleSubmit} className="gap-2">
+                <input className="text-2xl rounded shadow-md mr-2" type="text" placeholder="Enter Ingredients" value={inputText} onChange={e => setInputText(e.target.value)}/>
                 <button className="text-xl bg-blue-400 rounded-md shadow-lg text-white px-3 py-1 hover:bg-blue-800">Add</button>
-                <button className="text-xl bg-red-700 shadow-lg text-white rounded-md px-3 py-1 hover:bg-red-900">Clear</button>
+                
             </form>
+            <button onClick={() => clearLine()} className="text-xl bg-red-700 shadow-lg text-white rounded-md px-3 py-1 hover:bg-red-900">Clear</button>
+            </div>
             <div className="w-5/6 flex flex-col gap-2">
                 {ingredients.length === 0 && (<div className="text-white self-center">No Ingredients Listed</div>)}
                 {ingredients.map((ingredient) => {

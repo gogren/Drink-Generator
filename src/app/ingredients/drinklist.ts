@@ -57,7 +57,7 @@ function cleanUpIngredients(ingredients: Ingredient[]) {
             ingredients[i].title = "Coke"
         }
         else if (ing == "rum" || ing == "captain" || ing == "captainmorgan" 
-        || ing == "spicedrum") {
+        || ing == "spicedrum" || ing == "darkrum" || ing == "lightrum") {
             ingredients[i].title = "Rum"
         }
         else if (ing == "tonic" || ing == "tonicwater") {
@@ -147,7 +147,7 @@ function cleanUpIngredients(ingredients: Ingredient[]) {
         else if (ing == "absinthe") {
             ingredients[i].title = "Absinthe"
         }
-        else if (ing == "cherryliqueur" || ing == "cherryliquer" || ing == "cheryydrmcgillicuddys" || ing == "drmcgillicuddyscherry") {
+        else if (ing == "cherryliqueur" || ing == "cherryliquer" || ing == "cheryydrmcgillicuddys" || ing == "drmcgillicuddyscherry" || ing == "maraschino" || ing == "maraschinoliqueur") {
             ingredients[i].title = "Cherry Liqueur"
         }
         else if (ing == "benedictine") {
@@ -206,6 +206,18 @@ function cleanUpIngredients(ingredients: Ingredient[]) {
         }
         else if (ing == "coconutrum" || ing == "malibu") {
             ingredients[i].title = "Coconut Rum"
+        }
+        else if (ing == "milk") {
+            ingredients[i].title = "Milk";
+        }
+        else if (ing == "applebrandy" || ing == "calvados") {
+            ingredients[i].title = "Apple Brandy"
+        }
+        else if (ing == "greenchartreuse") {
+            ingredients[i].title = "Green Chartreuse"
+        }
+        else if (ing == "crèmedeviolette" || ing == "violetteliqueur" || ing == "crèmedeviolette") {
+            ingredients[i].title = "Violette Liqueur"
         }
         else {
             ingredients[i].title += " (Not found in database)"
