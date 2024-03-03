@@ -102,6 +102,7 @@ export default function ingredients() {
             </form>
             <button onClick={() => clearLine()} className="text-xl bg-red-700 shadow-lg text-white rounded-md px-3 py-1 hover:bg-red-900">Clear</button>
             </div>
+            <Link href="/checkbox" className="text-xl text-white bg-green-700 rounded-md shadow-md px-2 hover:bg-green-900 hover:transform hover:-translate-y-1 transition duration-300">Click Here For CheckBox Version</Link>
             <div className="w-5/6 flex flex-col gap-2">
                 {ingredients.length === 0 && (<div className="text-white self-center">No Ingredients Listed</div>)}
                 {ingredients.map((ingredient) => {

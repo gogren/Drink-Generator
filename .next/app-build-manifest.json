@@ -17,6 +17,11 @@
       "static/chunks/main-app.js",
       "static/css/app/ingredients/page.css",
       "static/chunks/app/ingredients/page.js"
+    ],
+    "/checkbox/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/checkbox/page.js"
     ]
   }
 }

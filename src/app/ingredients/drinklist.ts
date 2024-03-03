@@ -127,7 +127,7 @@ function cleanUpIngredients(ingredients: Ingredient[]) {
             ingredients[i].title = "Amaretto"
         }
         else if (ing == "mint" || ing == "mintleaves") {
-            ingredients[i].title = "Mint"
+            ingredients[i].title = "Mint Leaves"
         }
         else if (ing == "brandy" || ing == "calvados" || ing == "korbel") {
             ingredients[i].title = "Brandy"
